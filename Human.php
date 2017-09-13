@@ -4,6 +4,8 @@ namespace Human;
 
 use Human\Classes\Body;
 use Human\Classes\Brain;
+use Human\Interfaces\BodyInterface;
+use Human\Interfaces\BrainInterface;
 
 class Human extends HumanAbstract {
 
@@ -22,7 +24,7 @@ class Human extends HumanAbstract {
      * @param Body $body
      * @param Brain $brain
      */
-    function __construct(Body $body, Brain $brain)
+    function __construct(BodyInterface $body, BrainInterface $brain)
     {
         $this->body = $body;
         $this->brain = $brain;
